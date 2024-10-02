@@ -1,0 +1,54 @@
+.btn {
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 10px 30px;
+  outline: none;
+  background-color: #222222;
+  border: 2px #222222 solid;
+  border-radius: 1.5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #222222;
+  background-color: white;
+  border-color: #222222;
+}
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-btn {
+  background-color: white;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: #222;
+  }
+}
+
+.underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,115 @@
+.profile {
+  min-height: calc(100vh - 60px);
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+  padding: 40px 50px;
+  width: 90%;
+  max-width: 550px;
+}
+
+.profile > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile div > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile div > div > div:nth-child(1) {
+  min-width: 80px;
+  width: 5%;
+}
+.profile div > div > div:nth-child(2) {
+  width: 100%;
+}
+.profile > div > div:nth-child(1) {
+  width: fit-content;
+  cursor: pointer;
+  align-self: flex-end;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+  user-select: none;
+  svg {
+    fill: #222222;
+  }
+}
+
+.profile > div > div:nth-child(1):hover {
+  background-color: rgb(200, 200, 200, 0.2);
+}
+.profile input {
+  position: relative;
+  padding: 8px;
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+.profile div div div {
+  position: relative;
+}
+
+.profile div div div::after {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.profile .edible::after {
+  transform: scaleX(1);
+  transition: transform 0.2s ease;
+}
+
+.profile div:nth-child(6) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  div {
+    text-wrap: nowrap;
+    border-radius: 12px;
+    padding: 5px 12px;
+    border: 1.5px #222222 solid;
+    width: fit-content !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #222222;
+    background-color: #fff;
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: 0.2s;
+      fill: #222222;
+    }
+  }
+  div:hover {
+    color: #fff;
+    background-color: #222222;
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+@media (max-width: 470px), (orientation: portrait) {
+  .profile {
+    padding: 70px 20px;
+  }
+}

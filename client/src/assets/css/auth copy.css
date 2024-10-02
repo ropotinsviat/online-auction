@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-wrapper {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  position: relative;
+  overflow: hidden;
+
+  label {
+    color: yellowgreen;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  label:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Common figure class */
+.figure {
+  z-index: -1;
+  position: absolute;
+}
+
+/* Triangles */
+.triangle-small {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid yellowgreen;
+  top: 10%;
+  left: 50px;
+  transform: rotate(90deg);
+}
+
+.triangle-large {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid yellowgreen;
+  top: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/* Squares */
+.square-small {
+  transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  top: 25%;
+  left: 25%;
+}
+
+.square-large {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  bottom: 15%;
+  right: 75px;
+}
+
+/* Circles */
+.circle-small {
+  width: 40px;
+  height: 40px;
+  background-color: #222222;
+  border-radius: 50%;
+  top: 15%;
+  left: 65%;
+}
+
+.circle-large {
+  width: 200px;
+  height: 200px;
+  background-color: #222222;
+  border-radius: 50%;
+  top: calc(100% - 210px);
+  left: 15%;
+}
+
+/*  */
+.container {
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.container .registration {
+  display: none;
+}
+#check:checked ~ .registration {
+  display: block;
+}
+#check:checked ~ .login {
+  display: none;
+}
+#check {
+  display: none;
+}
+.container .form {
+  padding: 2rem;
+}
+.form h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border: none !important;
+  color: #222222;
+}
+.form input {
+  height: 52px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 15px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.form a {
+  font-size: 14px;
+  color: yellowgreen;
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+.form input.button {
+  height: 58px;
+  color: #fff;
+  background: yellowgreen;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover {
+  background: #668821;
+}
+.signup {
+  font-size: 15px;
+  text-align: center;
+}
+
+@media (max-width: 600px), (orientation: portrait) {
+  .circle-large {
+    left: 0;
+  }
+  .square-large {
+    right: 0;
+    top: 50%;
+  }
+  .circle-small,
+  .square-small,
+  .triangle-small {
+    display: none;
+  }
+}

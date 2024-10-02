@@ -1,0 +1,42 @@
+.managements-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  gap: 30px;
+}
+
+.management-card {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: calc((100% - 60px) / 3);
+  div {
+    color: #222;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: #222;
+  }
+}
+.management-card:hover {
+  background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 900px) {
+  .management-card {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (max-width: 500px) {
+  .management-card {
+    width: 100%;
+  }
+}
